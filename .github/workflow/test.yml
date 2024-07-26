@@ -1,0 +1,12 @@
+name: Test
+on:
+  release:
+    types: [created]
+  workflow_dispatch: on
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Exécuter un script d'une ligne
+        run: echo Bonjour, monde !
